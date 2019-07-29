@@ -8,7 +8,7 @@ lgtm_ghe_url: https://{{ lgtm_ghe_hostname }}
 
 
 lgtm_controller_ansible_name: "{{ groups['controller'][0] }}"
-lgtm_controller_hostname: "{{ hostvars[lgtm_controller_ansible_name]['ansible_default_ipv4']['address'] }}"
+lgtm_controller_hostname: "{{ hostvars[lgtm_controller_ansible_name]['inventory_hostname'] }}"
 
 
 lgtm_manifest_password: !vault |
